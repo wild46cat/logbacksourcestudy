@@ -1,0 +1,17 @@
+.settings
+target
+.classpath
+.factorypath
+.project
+.idea
+*~
+*.iml
+*.ipr
+*.iws
+logback-classic/jdbc:hsqldb:mem:test.log
+logback-classic/jdbc:hsqldb:mem:test.properties
+logback-classic/jdbc:hsqldb:mem:test.script
+cobertura.ser
+/xytest/target/
+!/logback-site/target/
+/logback-access/target/
