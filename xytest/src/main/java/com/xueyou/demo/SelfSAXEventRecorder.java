@@ -16,7 +16,7 @@ public class SelfSAXEventRecorder extends DefaultHandler {
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
-        super.endElement(uri, localName, qName);
+        super.endElement(uri, localName, qName;
         System.out.println("endElement:" + "\t" + uri + "\t" + localName + "\t" + qName + "\t");
     }
 

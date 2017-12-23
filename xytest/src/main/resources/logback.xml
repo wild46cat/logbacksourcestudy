@@ -9,6 +9,6 @@
     </appender>
 
     <root level="debug">
-        <appender-ref ref="XYSTDOUT" />
+        <appender-ref ref="XYSTDOUT"/>
     </root>
 </configuration>
