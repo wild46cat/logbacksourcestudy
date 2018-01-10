@@ -11,7 +11,10 @@ public class SelfSAXEventRecorder extends DefaultHandler {
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         super.startElement(uri, localName, qName, attributes);
-        System.out.println("startElement:" + "\t" + uri + "\t" + localName + "\t" + qName + "\t"  +  attributes.getValue("name"));
+        System.out.println("startElement:" + "\t" + uri + "\t" + localName + "\t" + qName + "\t");
+        for (int i = 0; i < attributes.getLength(); i++) {
+            System.out.println(attributes.getQName(i) + ":" + attributes.getValue(i));
+        }
     }
 
     @Override
@@ -23,6 +26,13 @@ public class SelfSAXEventRecorder extends DefaultHandler {
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
         String bodyStr = new String(ch, start, length);
-        System.out.println("bodyStr" + "\t" + bodyStr);
+        if (!isSpaceOnly(bodyStr)) {
+            System.out.println("bodyStr" + "\t" + bodyStr);
+        }
+    }
+
+    boolean isSpaceOnly(String bodyStr) {
+        String bodyTrimmed = bodyStr.trim();
+        return (bodyTrimmed.length() == 0);
     }
 }
