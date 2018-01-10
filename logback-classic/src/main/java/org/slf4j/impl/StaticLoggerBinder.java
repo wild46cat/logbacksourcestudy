@@ -13,18 +13,17 @@
  */
 package org.slf4j.impl;
 
-import ch.qos.logback.core.status.StatusUtil;
-import org.slf4j.ILoggerFactory;
-import org.slf4j.LoggerFactory;
-import org.slf4j.helpers.Util;
-import org.slf4j.spi.LoggerFactoryBinder;
-
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.util.ContextInitializer;
 import ch.qos.logback.classic.util.ContextSelectorStaticBinder;
 import ch.qos.logback.core.CoreConstants;
 import ch.qos.logback.core.joran.spi.JoranException;
+import ch.qos.logback.core.status.StatusUtil;
 import ch.qos.logback.core.util.StatusPrinter;
+import org.slf4j.ILoggerFactory;
+import org.slf4j.LoggerFactory;
+import org.slf4j.helpers.Util;
+import org.slf4j.spi.LoggerFactoryBinder;
 
 /**
  * 
